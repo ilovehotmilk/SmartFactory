@@ -1,0 +1,9 @@
+#BNF+IAT 1.0;
+!grammar tengen;
+!slot <command>;
+
+!start <tengenCommand>;
+
+<tengenCommand>:<command>;
+
+<command>:开始加工|停止加工;

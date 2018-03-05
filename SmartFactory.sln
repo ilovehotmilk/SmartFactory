@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartFactory", "SmartFactory\SmartFactory.csproj", "{3E2F4478-F067-4577-B5E2-52E5871D1C59}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A3D0F8AA-647B-4F74-9300-4717BAC083C1} = {A3D0F8AA-647B-4F74-9300-4717BAC083C1}
+		{6AED0ED3-A394-4527-8A2D-B4F206C315CE} = {6AED0ED3-A394-4527-8A2D-B4F206C315CE}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PyFaceRecognition", "PyFaceRecognition\PyFaceRecognition.csproj", "{6AED0ED3-A394-4527-8A2D-B4F206C315CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iFlyDotNet", "iFlyDotNet\iFlyDotNet.csproj", "{A3D0F8AA-647B-4F74-9300-4717BAC083C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E2F4478-F067-4577-B5E2-52E5871D1C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E2F4478-F067-4577-B5E2-52E5871D1C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E2F4478-F067-4577-B5E2-52E5871D1C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E2F4478-F067-4577-B5E2-52E5871D1C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AED0ED3-A394-4527-8A2D-B4F206C315CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AED0ED3-A394-4527-8A2D-B4F206C315CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AED0ED3-A394-4527-8A2D-B4F206C315CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AED0ED3-A394-4527-8A2D-B4F206C315CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D0F8AA-647B-4F74-9300-4717BAC083C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D0F8AA-647B-4F74-9300-4717BAC083C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D0F8AA-647B-4F74-9300-4717BAC083C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D0F8AA-647B-4F74-9300-4717BAC083C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E77C4E7-4759-4A73-A972-2093CA0B2C46}
+	EndGlobalSection
+EndGlobal
