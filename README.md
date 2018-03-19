@@ -13,6 +13,7 @@
 * 摄像头、麦克风、音响
 ### 人脸识别
 * 下载[Python3.5运行环境压缩包](https://pan.baidu.com/s/1MSSY8c8R1ipaKfDJJpsXpg)，解压至与可执行文件同一目录下
+* 可执行文件路径不可以包含中文！！！
 ### 语音识别和语音合成
 * 在科大讯飞官网注册并获取[离线命令词识别SDK](http://www.xfyun.cn/services/commandWord)和[离线语音合成SDK](http://www.xfyun.cn/services/offline_tts)
 * 将SmartFactory项目下的msc_x64.dll替换为离线命令词识别SDK中bin文件夹中的msc_x64.dll
