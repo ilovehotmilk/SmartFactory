@@ -29,7 +29,6 @@ namespace SmartFactory
             waveSource.DataAvailable += new EventHandler<WaveInEventArgs>(waveSource_DataAvailable);
             waveSource.RecordingStopped += new EventHandler<StoppedEventArgs>(waveSource_RecordingStopped);
             waveSource.StartRecording();
-           
         }
 
         /// <summary>

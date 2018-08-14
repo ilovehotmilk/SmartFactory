@@ -14,9 +14,9 @@
         BorderThickness="1"
         MinHeight="510"
         MinWidth="640"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         WindowStartupLocation="CenterScreen"
         Loaded="MetroWindow_Loaded" Closing="MetroWindow_Closing">
-
     <Controls:MetroWindow.Resources>
         <Storyboard x:Key="TipStory">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="txtTip">
@@ -206,7 +206,7 @@
             <ImageBrush ImageSource="focus.png" Stretch="UniformToFill"/>
         </Grid.Background>
         <TextBlock Grid.Row="0" x:Name="txtTip" Text="Tip" HorizontalAlignment="Center" FontSize="22" Foreground="White" Margin="0,10,0,0" />
-        <wpfmedia:VideoCaptureElement Grid.Row="0" x:Name="videoCaptureElement" RenderTransformOrigin="0.5,0.5" Margin="0">
+        <wpfmedia:VideoCaptureElement Grid.Row="0" x:Name="videoCaptureElement" RenderTransformOrigin="0.5,0.5" Margin="0" DesiredPixelHeight="480" DesiredPixelWidth="640">
             <wpfmedia:VideoCaptureElement.OpacityMask>
                 <RadialGradientBrush RadiusY="0.64" RadiusX="0.48" Center="0.5,0.5" >
                     <GradientStop Color="#00383030" Offset="0.5"/>

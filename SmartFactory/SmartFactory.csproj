@@ -43,9 +43,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>dll\DirectShowLib-2005.dll</HintPath>
     </Reference>
-    <Reference Include="iFlyDotNet">
-      <HintPath>dll\iFlyDotNet.dll</HintPath>
-    </Reference>
     <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -54,10 +51,6 @@
     </Reference>
     <Reference Include="NAudio, Version=1.8.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NAudio.1.8.4\lib\net35\NAudio.dll</HintPath>
-    </Reference>
-    <Reference Include="PyFaceRecognition, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>dll\PyFaceRecognition.dll</HintPath>
     </Reference>
     <Reference Include="Python.Runtime, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -157,6 +150,16 @@
     <Content Include="msc_x64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iFlyDotNet\iFlyDotNet.csproj">
+      <Project>{a3d0f8aa-647b-4f74-9300-4717bac083c1}</Project>
+      <Name>iFlyDotNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PyFaceRecognition\PyFaceRecognition.csproj">
+      <Project>{6aed0ed3-a394-4527-8a2d-b4f206c315ce}</Project>
+      <Name>PyFaceRecognition</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\WPFMediaKit.2.2.0\build\WPFMediaKit.targets" Condition="Exists('..\packages\WPFMediaKit.2.2.0\build\WPFMediaKit.targets')" />

@@ -22,6 +22,7 @@ using System.Windows.Media.Imaging;
 using WPFMediaKit.DirectShow.Controls;
 using System.Windows.Media.Animation;
 using iFlyDotNet;
+using System.Threading;
 
 namespace SmartFactory
 {
@@ -38,7 +39,7 @@ namespace SmartFactory
 
         private const string adminPwd = "123";
 
-        private readonly string loginParam = "";
+        private readonly string loginParam = "appid = 5a404c2c";
 
         private readonly string bnfPath = "tengen.bnf";
 
@@ -58,7 +59,6 @@ namespace SmartFactory
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = this;
             txtTip.Text = "";
             faceRec = FaceRecoginition.GetInstance(new Func<Bitmap>(() => GetBitmap()));
             faceRec.ResultEvent += ResultHandler;
@@ -70,11 +70,11 @@ namespace SmartFactory
                 IFlyAsr.GetInstance().GetResult += (asrStr) =>
                 {
                     this.ShowModalMessageExternal("识别结果", asrStr);
-                    var ttsStr = Talkback.GetResult(asrStr);
-                    if (ttsStr == null)
-                        return;
-                    var data = IFlyTTS.GetInstance().GetPcmDataByTTS(ttsStr);
-                    nAudioHelper.Play(data);
+                    //var ttsStr = Talkback.GetResult(asrStr);
+                    //if (ttsStr == null)
+                    //    return;
+                    //var data = IFlyTTS.GetInstance().GetPcmDataByTTS(ttsStr);
+                    //nAudioHelper.Play(data);
                 };
                 nAudioHelper = new NAudioHelper();
                 nAudioHelper.PcmDataAvailable += (data) => IFlyAsr.GetInstance().RunAsrRealTime(data, 60);
@@ -85,9 +85,8 @@ namespace SmartFactory
         {
             if (MultimediaUtil.VideoInputDevices.Any())
                 videoCaptureElement.VideoCaptureDevice = MultimediaUtil.VideoInputDevices[0];
-            faceRec.Start();
+            faceRec?.Start();
             nAudioHelper?.StartRec();
-
         }
 
         private Bitmap GetBitmap()
@@ -142,7 +141,7 @@ namespace SmartFactory
 
         private void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            faceRec.Dispose();
+            faceRec?.Stop();
             nAudioHelper?.StopRec();
         }
 
@@ -181,6 +180,7 @@ namespace SmartFactory
                                 txtTip.Text = "你好，"+result;
                                 Storyboard story = (Storyboard)this.FindResource("TipStory");
                                 story.Begin();
+                                AuthenticationPassed();
                             }
                             break;
                     }
@@ -273,7 +273,13 @@ namespace SmartFactory
 
         private void btnPwdLogin_Click(object sender, RoutedEventArgs e)
         {
-            PasswordAuthentication();
+            if (PasswordAuthentication())
+                AuthenticationPassed();
+        }
+
+        private void AuthenticationPassed()
+        {
+
         }
     }
 }
