@@ -22,12 +22,3 @@
 * 用讯飞开放平台控制台中的APPID给SmartFactory项目下MainWindows.xaml.cs文件中的"loginParam"属性赋值（例如：loginParam = "APPID = 123456";）
 * 将SmartFactory项目下的tengen.bnf中的command替换为自己需要识别的命令词，不同命令词之间用"|"分隔
 * SmartFactory项目下的tengen.tbk中的每一行为一个完整的语音识别和合成的反馈组合,"|"的左边为语音识别的命令词，右边为语音合成需要反馈的语句
-
-## 可能会遇到的问题
-* 在Windows10环境下编译运行可能会遇到语音识别模块的报错问题。   
-**解决方案：**    
-1、在Windows7环境下编译运行    
-2、向科大讯飞QQ群求助(群号:514352489)
-
-## 联系作者
-* QQ：718825515
